@@ -1,15 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:learn/core/widgets/main_wrapper.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MaterialApp(
+    home: MyApp(),
+    debugShowCheckedModeBanner: false,
+  ));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyApp extends StatefulWidget {
+  MyApp({super.key});
 
-  // This widget is the root of your application.
+  int num = 0;
+
   @override
-  Widget build(BuildContext context){
-    return MaterialApp(home: ,);
+  State<StatefulWidget> createState() => _MyApp();
+}
+
+class _MyApp extends State<MyApp> {
+
+  @override
+  Widget build(BuildContext context) {
+    return const MainWrapper();
   }
 }
